@@ -1,0 +1,361 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+  }
+  
+  /* Header */
+  .site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 20px 40px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 500;
+  }
+  .nav-links a:hover {
+    color: #2563eb;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #ffffff;
+  }
+  .hero-text {
+    max-width: 500px;
+  }
+  .hero-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .hero-text h2 span {
+    color: #2563eb;
+  }
+  .hero-text p {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    color: #374151;
+  }
+  .hero-text .btn {
+    background-color: #ef4444;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .hero-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e5e7eb;
+  }
+  
+  /* Recent Posts */
+  .recent-posts {
+    padding: 50px 40px;
+    background-color: #f1f5f9;
+  }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .section-header h3 {
+    font-size: 1.5em;
+  }
+  .section-header a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  .posts-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .post-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 350px;
+  }
+  .post-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .post-card small {
+    display: block;
+    font-size: 0.9em;
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+  .post-card p {
+    font-size: 1em;
+    color: #374151;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-img {
+      margin-top: 30px;
+    }
+  
+    .posts-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+  /* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+}
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.footer-links a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.footer p {
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gallery-intro h2 {
+    font-size: 1.1em;
+  }
+}
+
+/* Reuse Header and Footer Styles */
+.site-header {
+  background-color: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-links a.active {
+  color: #ef4444;
+}
+
+/* Blog Styles */
+.blog-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.blog-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #1f2937;
+}
+.blog-post {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.blog-post h3 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+.blog-post h3 a {
+  text-decoration: none;
+  color: #1f2937;
+}
+.blog-post h3 a:hover {
+  color: #2563eb;
+}
+.meta {
+  font-size: 0.85em;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+.tags {
+  color: #60a5fa;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #f9fafb;
+  color: #6b7280;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Contact Styles */
+.contact-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.section-description {
+  margin-bottom: 20px;
+  color: #6b7280;
+}
+.contact-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.contact-item {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+.contact-item a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+
+.modal {
+  display: none; /* disembunyikan dulu */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* gelap transparan */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #333;
+}
